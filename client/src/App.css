@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #d9fdd3; /* WhatsApp light green */
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  color: #075e54;
+}
+
+.join-box input {
+  padding: 8px;
+  margin-right: 5px;
+}
+
+.join-box button {
+  padding: 8px 12px;
+  background: #25d366;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-box {
+  width: 350px;
+  height: 450px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background: #ffffff; /* WHITE CLEAN */
+  overflow-y: scroll;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.message {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.message.own {
+  justify-content: flex-end;
+}
+
+.bubble {
+  background: #f1f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  max-width: 70%;
+}
+
+.message.own .bubble {
+  background: #dcf8c6;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.tick {
+  margin-left: 5px;
+  color: gray;
+}
+
+.tick.seen {
+  color: blue;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-box input {
+  padding: 8px;
+  width: 200px;
+}
+
+.input-box button {
+  padding: 8px 12px;
+  background: #25d366;
+  border: none;
+  color: white;
+}
+
+.users {
+  font-size: 12px;
+  color: #075e54;
+}
+
+.typing {
+  font-size: 12px;
+  color: gray;
+}
