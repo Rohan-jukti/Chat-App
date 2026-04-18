@@ -1,20 +1,35 @@
 const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
+const cors = require("cors");
 
 const app = express();
+
+// middleware
+app.use(cors());
+app.use(express.json());
+
+// health check route (important for Railway)
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 const server = http.createServer(app);
 
+// socket setup
 const io = new Server(server, {
   cors: {
     origin: "*",
+    methods: ["GET", "POST"],
   },
 });
 
 let users = {};
 
 io.on("connection", (socket) => {
+  console.log("User connected:", socket.id);
 
+  // join
   socket.on("join", (username) => {
     users[socket.id] = username;
     io.emit("online_users", Object.values(users));
@@ -28,7 +43,7 @@ io.on("connection", (socket) => {
     });
   });
 
-  // ✅ FIXED seen (only sender ko bhejna)
+  // seen
   socket.on("seen", ({ msgId, sender }) => {
     for (let id in users) {
       if (users[id] === sender) {
@@ -37,6 +52,7 @@ io.on("connection", (socket) => {
     }
   });
 
+  // typing
   socket.on("typing", (username) => {
     socket.broadcast.emit("typing", username);
   });
@@ -45,7 +61,9 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("stop_typing");
   });
 
+  // disconnect
   socket.on("disconnect", () => {
+    console.log("User disconnected:", socket.id);
     delete users[socket.id];
     io.emit("online_users", Object.values(users));
   });
@@ -54,5 +72,5 @@ io.on("connection", (socket) => {
 const PORT = process.env.PORT || 3001;
 
 server.listen(PORT, () => {
-  console.log("Server running");
+  console.log(`Server running on port ${PORT}`);
 });
