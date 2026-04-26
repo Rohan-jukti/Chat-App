@@ -26,13 +26,6 @@ This is a real-time chat application where users can join using a username and c
 * Online user status
 * Clean and simple UI
 
----
-
-## 📸 Preview
-
-
-<img src="https://github.com/user-attachments/assets/543d64ef-97c2-4006-8f61-1d60f18e569" width="600"/>
-
 
 ---
 
