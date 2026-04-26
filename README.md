@@ -1,16 +1,72 @@
-# Real-Time Chat App
+# 💬 Real-Time Chat App
 
-This is a real-time chat application built using:
+🚀 Live Demo: https://chat-app-two-theta-84.vercel.app
+📂 GitHub Repository: https://github.com/Rohan-jukti/Chat-App
 
-- React (Frontend)
-- Node.js + Express (Backend)
-- Socket.io (Real-time communication)
+---
 
-## Features
-- Live messaging
-- Online users
-- Message status (delivered/seen)
+## 📌 About Project
 
-## How to run
-1. Go to client folder → npm install → npm start
-2. Go to server folder → npm install → npm start
+This is a real-time chat application where users can join using a username and communicate instantly.
+
+---
+
+## ⚙️ Tech Stack
+
+* React.js (Frontend)
+* Node.js + Express (Backend)
+* Socket.io (Real-time communication)
+
+---
+
+## ✨ Features
+
+* Join chat with username
+* Real-time messaging
+* Online user status
+* Clean and simple UI
+
+---
+
+## 📸 Preview
+
+![Chat App Screenshot](<img width="1846" height="950" alt="image" src="https://github.com/user-attachments/assets/7efd7561-2e01-4b51-83da-b0abfebfb513" />
+)
+
+---
+
+## 🚀 How to Run Locally
+
+### 1️⃣ Clone the repository
+
+git clone https://github.com/Rohan-jukti/Chat-App.git
+
+### 2️⃣ Install dependencies
+
+👉 Client
+cd client
+npm install
+npm start
+
+👉 Server
+cd server
+npm install
+npm start
+
+---
+
+## 📌 Note
+
+This is a frontend deployed version on Vercel. Backend deployment is in progress, so some real-time features may not work fully.
+
+---
+
+## 🙌 Author
+
+Rohan Jukti
+
+---
+
+## ⭐ Support
+
+If you like this project, please give it a star ⭐ on GitHub!
