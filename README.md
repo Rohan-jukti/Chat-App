@@ -30,8 +30,7 @@ This is a real-time chat application where users can join using a username and c
 
 ## 📸 Preview
 
-![Chat App Screenshot](<img width="1846" height="950" alt="image" src="https://github.com/user-attachments/assets/7efd7561-2e01-4b51-83da-b0abfebfb513" />
-)
+![Chat App Screenshot](https://github.com/user-attachments/assets/7efd7561-2e01-4651-83da-b0abfebfb513)
 
 ---
 
