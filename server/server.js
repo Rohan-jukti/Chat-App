@@ -19,7 +19,7 @@ const server = http.createServer(app);
 // socket setup
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://chat-app-two-theta-84.vercel.app",
     methods: ["GET", "POST"],
   },
 });
